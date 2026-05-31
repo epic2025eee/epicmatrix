@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GS2PICEEE</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="assets/img/general/pic_icon.ico" rel="icon">
+<link href="assets/img/general/pic_icon.ico" rel="apple-touch-icon">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link href="assets/css/main.css" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.uxuicontainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+.uxuiproj {
+    padding: 100px 0;
+    background: #081120;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.subtitle {
+    color: #00c6ff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-header h2 {
+    color: #fff;
+    font-size: 42px;
+    margin: 20px 0;
+}
+.section-header p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+/* =========================
+   SWIPER CONTAINER
+========================= */
+.uxuiSwiper {
+    padding: 20px 10px 80px;
+    position: relative;
+}
+/* KEEP SLIDE HEIGHT EQUAL */
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+/* =========================
+   PROJECT CARD
+========================= */
+.project-card {
+    background: #111827;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    /* IMPORTANT */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+}
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+/* IMAGE HOVER */
+.project-card img:hover {
+    border-bottom: 2px solid #00c6ff;
+    box-shadow: 0 4px 20px rgba(0,198,255,0.25);
+}
+/* =========================
+   CONTENT AREA
+========================= */
+.project-content {
+    padding: 25px;
+    /* IMPORTANT */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+/* TITLE */
+.project-content h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+/* DESCRIPTION */
+.project-content p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    /* PUSH TAG DOWN */
+    flex-grow: 1;
+}
+/* =========================
+   TAG FIXED BOTTOM
+========================= */
+.project-tag {
+    display: inline-block;
+    background: #00c6ff20;
+    color: #00c6ff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    /* IMPORTANT */
+    margin-top: auto;
+    align-self: flex-start;
+}
+/* =========================
+   PROJECT LINK
+========================= */
+.project-link {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/* =========================
+   STATIC NAVIGATION BUTTONS
+========================= */
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 50;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: #00c6ff;
+    transition: 0.3s ease;
+}
+/* ICON */
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: 700;
+}
+/* HOVER */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: #00c6ff;
+    color: #081120;
+}
+/* POSITION FIX */
+.swiper-button-prev {
+    left: -25px;
+}
+.swiper-button-next {
+    right: -25px;
+}
+/* PAGINATION */
+.swiper-pagination-bullet-active {
+    background: #00c6ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:1024px) {
+.section-header h2 {
+    font-size: 34px;
+}
+.swiper-button-prev {
+    left: -10px;
+}
+.swiper-button-next {
+    right: -10px;
+}
+}
+
+@media(max-width:768px) {
+.section-header h2 {
+    font-size: 28px;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    top: 40%;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 13px;
+}
+}
+.project-card img:Hover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #00c6ff;
+    box-shadow: 0 4px 20px rgba(0,198,255,0.25);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px) {
+.section-header h2 {
+    font-size: 34px;
+}
+}
+
+@media(max-width:768px) {
+.section-header h2 {
+    font-size: 28px;
+}
+}
+</style>
+</head>
+
+<body class="index-page">
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center"> <a href="index.html" class="logo d-flex align-items-center me-auto"> <img src="assets/img/general/pic_logo_light.webp" alt="" class="img-fluid"></a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#uxuiproj">UXUI Projects</a></li>
+		<li><a href="#vidgal">Video Gallery</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> </nav>
+  </div>
+</header>
+<main class="main">
+  <section id="hero" class="hero section dark-background"> <img src="assets/img/general/hero_bg.webp"
+       alt="" 
+       class="hero-bg"
+       data-aos="fade-in">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+      <h2 data-aos="fade-up" data-aos-delay="100"> Engage. Entertain. Execute. </h2>
+      <div class="hero-writing">
+        <h1 style="font-weight:300;">Hello, I'm a Typical Guy <span>Krishna</span></h1>
+        <h2 class="writing-line"> <span id="typing"></span> </h2>
+        <p> Transforming ideas into digital reality through creativity,
+          development, animation, and storytelling. </p>
+      </div>
+      <div class="d-flex mt-4 gap-3"
+         data-aos="fade-up"
+         data-aos-delay="300"> <a href="#portfolio" class="btn btn-primary"> View Work </a> <a href="#contact" class="btn btn-outline-light"> Contact </a> <a href="https://www.youtube.com/embed/4yWE8_GMnOY"
+         class="glightbox btn-watch-video d-flex align-items-center"> <i class="bi bi-play-circle"></i> <span class="ms-2">Watch Video</span> </a> </div>
+    </div>
+  </section>
+  <section id="about" class="about section">
+    <div class="container py-5">
+      <ul class="nav nav-pills justify-content-center mb-4" id="portfolioTabs">
+        <li class="nav-item">
+          <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab1"> Who We Are </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab2"> What We Do </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab3"> Why Chooose Us </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab4"> Our Vision </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab5"> Our Mission </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab6"> Goal </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab7"> Strategy </button>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="tab1">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <p class="fst-italic"> We are a dedicated team.</p>
+              <ul>
+                <li>Experienced professionals</li>
+                <li>Customer focused</li>
+                <li>Driven by excellence</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2"> <img src="assets/img/about/who_we_are.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab2">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6"> <img src="assets/img/about/what_we_do.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+            <div class="col-lg-6">
+              <p class="fst-italic"> We provide smart solutions.</p>
+              <ul>
+                <li>Innovative services</li>
+                <li>Custom solutions</li>
+                <li>Support And growth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab3">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <p class="fst-italic"> We deliver quality And trust.</p>
+              <ul>
+                <li>Proven results</li>
+                <li>High standards</li>
+                <li>Client trust</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2"> <img src="assets/img/about/why_choose_us.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab4">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6"> <img src="assets/img/about/vision.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+            <div class="col-lg-6">
+              <p class="fst-italic"> Leading with innovation. </p>
+              <ul>
+                <li>Future focused</li>
+                <li>Growth mindset</li>
+                <li>Innovation driven</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab5">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <p class="fst-italic"> Deliver value always.</p>
+              <ul>
+                <li>Customer first</li>
+                <li>Real results</li>
+                <li>Ethical work</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2"> <img src="assets/img/about/mission.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab6">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6"> <img src="assets/img/about/goals.webp"
+           class="img-fluid rounded-4"
+           alt=""></div>
+            <div class="col-lg-6">
+              <p class="fst-italic"> Achieve sustainable growth. </p>
+              <ul>
+                <li>Expand reach</li>
+                <li>Improve quality</li>
+                <li>Build partnerships</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab7">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <p class="fst-italic">Smart And adaptive approach. </p>
+              <ul>
+                <li>Data-driven</li>
+                <li>Agile methods</li>
+                <li>Continuous innovation</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2"> <img src="assets/img/about/strategy.webp"
+           class="img-fluid rounded-4"
+           alt=""> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="clients" class="clients section light-background">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4">
+        <div class="col-xl-2 col-md-3 col-6 client-logo"> <img src="assets/img/clients/client_1.webp" class="img-fluid" alt=""> </div>
+        <div class="col-xl-2 col-md-3 col-6 client-logo"> <img src="assets/img/clients/client_2.webp" class="img-fluid" alt=""> </div>
+        <div class="col-xl-2 col-md-3 col-6 client-logo"> <img src="assets/img/clients/client_3.webp" class="img-fluid" alt=""> </div>
+        <div class="col-xl-2 col-md-3 col-6 client-logo"> <img src="assets/img/clients/client_4.webp" class="img-fluid" alt=""> </div>
+        <div class="col-xl-2 col-md-3 col-6 client-logo"> <img src="assets/img/clients/client_5.webp" class="img-fluid" alt=""> </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="services section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Operations</h2>
+      <p>Featured Services</p>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="service-card">
+              <div class="row align-items-center g-0">
+                <div class="col-lg-5"> <img src="assets/img/services/1_2d_3d_designing.webp"
+                     class="img-fluid service-img"
+                     alt="2D & 3D Designing"></div>
+                <div class="col-lg-7">
+                  <div class="service-content">
+                    <div class="icon"> <i class="bi bi-activity"></i></div>
+                    <h3>2D &amp; 3D Designing</h3>
+                    <p> Visualize spaces and concepts with detailed 2D drawings
+                      and photoreal 3D models for presentations and client approvals. </p>
+                    <a href="service-details.html" class="btn btn-outline-primary"> Read More </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="service-card">
+              <div class="row align-items-center g-0">
+                <div class="col-lg-5"> <img src="assets/img/services/2_uiux.webp"
+                     class="img-fluid service-img"
+                     alt="UI UX Design"></div>
+                <div class="col-lg-7">
+                  <div class="service-content">
+                    <div class="icon"> <i class="bi bi-broadcast"></i></div>
+                    <h3>UI / UX Design</h3>
+                    <p> User-centred interfaces and prototypes focused on accessibility
+                      and delightful interactions. </p>
+                    <a href="service-details.html" class="btn btn-outline-primary"> Read More </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="service-card">
+              <div class="row align-items-center g-0">
+                <div class="col-lg-5"> <img src="assets/img/services/3_e_learning.webp"
+                     class="img-fluid service-img"
+                     alt="E-Learning Development"></div>
+                <div class="col-lg-7">
+                  <div class="service-content">
+                    <div class="icon"> <i class="bi bi-easel"></i></div>
+                    <h3>E-Learning Development</h3>
+                    <p> Interactive lessons, multimedia assets and assessments
+                      designed for meaningful learning experiences. </p>
+                    <a href="service-details.html" class="btn btn-outline-primary"> Read More </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev"
+              type="button"
+              data-bs-target="#servicesCarousel"
+              data-bs-slide="prev"> </button>
+        <button class="carousel-control-next"
+              type="button"
+              data-bs-target="#servicesCarousel"
+              data-bs-slide="next"> </button>
+      </div>
+      <div class="text-end mt-2"> <a href="service-details.html" target="_blank" class="browse-link">Browse More Services → </a></div>
+    </div>
+  </section>
+  <section id="testimonials" class="testimonials section dark-background"> <img src="assets/img/testimonials/testimoni_bg.webp" class="testimonials-bg" alt="">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper init-swiper"> 
+        <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/sadna.webp" class="testimonial-img" alt="">
+              <h3>Sadna Sankar</h3>
+              <h4>Actress/Model/Compiring</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Working with Krishna was an amazing experience. His creative direction, visual storytelling, and editing style brought my ideas to life beautifully. The final output looked professional, cinematic, and highly engaging.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/gupta.webp" class="testimonial-img" alt="">
+              <h3>Sashi Gupta</h3>
+              <h4>Masonry Retired Off</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna is hardworking, respectful, and highly dedicated to his work.
+                His ability to understand requirements and deliver quality results on time is truly impressive.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/lakshmanan.webp" class="testimonial-img" alt="">
+              <h3>Lakshmanan</h3>
+              <h4>Business Executive</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna has a strong creative mindset and excellent communication skills.
+                His digital solutions and branding ideas helped present our business in a modern and professional way.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/murugan.webp" class="testimonial-img" alt="">
+              <h3>Murugan Lakshmanan</h3>
+              <h4>Developer(Android/IOS)</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna combines creativity with technical thinking. His UI ideas, design approach, and understanding of modern digital experiences make collaboration smooth and productive.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/karthik.webp" class="testimonial-img" alt="">
+              <h3>Karthik</h3>
+              <h4>Designer</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna has a unique eye for detail and aesthetics. His creativity, motion concepts, and visual execution stand out with a fresh and modern style.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/aaliya.webp" class="testimonial-img" alt="">
+              <h3>Aaliya Amreen</h3>
+              <h4>Business Executive</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Professional, innovative, and highly reliable — Krishna consistently delivers visually appealing and impactful work that aligns perfectly with business goals.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/sowmya.webp" class="testimonial-img" alt="">
+              <h3>Sowmya Iyer</h3>
+              <h4>Business Administration</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna approaches every project with dedication and creativity. His ability to organize ideas and transform them into meaningful digital experiences is remarkable.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/harshnee.webp" class="testimonial-img" alt="">
+              <h3>Harshnee Hrithayaraj</h3>
+              <h4>Sr. Tester</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna pays close attention to quality and user experience. His designs are not only visually attractive but also practical,
+                responsive, and user-friendly.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/harish.webp" class="testimonial-img" alt="">
+              <h3>Harish</h3>
+              <h4>Acharyar</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna is sincere, disciplined, and passionate about his work. His respectful attitude and commitment toward excellence
+                make him stand apart.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item"> <img src="assets/img/testimonials/jothy.webp" class="testimonial-img" alt="">
+              <h3>Jothy Manickam</h3>
+              <h4>Sr. QC</h4>
+              <div class="stars"> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p> <i class="bi bi-quote quote-icon-left"></i> <span>“Krishna maintains high standards in every aspect of his work. His focus on quality, creativity, and timely delivery reflects
+                true professionalism.”</span> <i class="bi bi-quote quote-icon-right"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="portfolio section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Portfolio</h2>
+      <p>Multimedia Showcase</p>
+    </div>
+    <div class="container">
+      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-brochure">Brochure</li>
+          <li data-filter=".filter-poster">Poster</li>
+          <li data-filter=".filter-banner">Banner</li>
+          <li data-filter=".filter-greeting">Greeting</li>
+          <li data-filter=".filter-logo">Logo</li>
+          <li data-filter=".filter-misc">Miscellaneous</li>
+          <li data-filter=".filter-wrapper">Wrapper</li>
+          <li data-filter=".filter-uxui">UXUI</li>
+          <li data-filter=".filter-buzcard">Business Card</li>
+          <li data-filter=".filter-3d">3D</li>
+        </ul>
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-brochure">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Brochure/Brochure Trifold 2_001.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Brochure</h4>
+                <a href="assets/img/portfolio/Brochure/Brochure Trifold 2_001.webp" title="brochure" data-gallery="portfolio-gallery-brochure" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-poster">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Poster/Academy Poster.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Poster</h4>
+                <a href="assets/img/portfolio/Poster/Academy Poster.webp" title="poster" data-gallery="portfolio-gallery-poster" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-banner">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Banner/App Poster.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Banner</h4>
+                <a href="assets/img/portfolio/Banner/App Poster.webp" title="Banner" data-gallery="portfolio-gallery-banner" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-greeting">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Greeting/Invite 1.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/Greeting/Invite 1.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Logo/CI Logo.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/Logo/CI Logo.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-misc">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Miscellaneous/LV 7th Year.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/Miscellaneous/LV 7th Year.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-wrapper">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/Wrapper/CD Cover Design 2.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/Wrapper/CD Cover Design 2.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-uxui">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/UIUX/Finsecure App/2 Login Screen Usual.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/UIUX/Finsecure App/2 Login Screen Usual.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-buzcard">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/VC/Business Card-01.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/VC/Business Card-01.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-3d">
+            <div class="portfolio-content h-100"> <img src="assets/img/portfolio/3D/Arena Bangalore Panorama.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Greeting</h4>
+                <a href="assets/img/portfolio/3D/Arena Bangalore Panorama.webp" title="Greeting" data-gallery="portfolio-gallery-greeting" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="uxuiproj" class="uxuiproj">
+    <div class="uxuicontainer">
+      <div class="section-header">
+        <h2>✨ User Experience And Interface Showcase</h2>
+        <p>From Ideas to Interactive Reality</p>
+      </div>
+      <div class="swiper uxuiSwiper">
+        <div class="swiper-wrapper"> 
+          
+          <!-- PROJECT 1 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/Vtx4gV8eEv0z7QkE1FOUud/3-Chatbot-AI-STD-Mobile-App-UI?page-id=0%3A1&node-id=2-36"
+   target="_blank"    class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_1.png" alt="">
+              <div class="project-content">
+                <h3>ChatBot AI Solutions</h3>
+                <p> Natural Language Processing,
+                  Machine Learning and Deep Learning Experiences. </p>
+                <span class="project-tag">AI And Automation</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 2 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/mAWdUCU89g2TORCp8YLUiD/4-Chatbot-AI-Mobile-App-UI?page-id=0%3A1&node-id=2-2888"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_2.png" alt="">
+              <div class="project-content">
+                <h3>AI-Powered Chatbots</h3>
+                <p>Automated conversational systems for banking, e-commerce and healthcare industries.</p>
+                <span class="project-tag">AI Chatbots</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 3 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/sO918ONBNXUcORxhPrYkuw/1-Appiee-Gate?page-id=0%3A1&node-id=2-240"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_3.png" alt="">
+              <div class="project-content">
+                <h3>Beyond the Gates</h3>
+                <p>Premium private community living experience with modern residential UX design.</p>
+                <span class="project-tag">Real Estate</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 4 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/SlTv6W27CACyYyW6nLXTQR/2-Appiee-Insure?page-id=0%3A1&node-id=1-35"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_4.png" alt="">
+              <div class="project-content">
+                <h3>Swift Insure</h3>
+                <p>Seamless digital insurance experience with instant onboarding and policy access.</p>
+                <span class="project-tag">Insurance</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 5 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/rPExZZSINlnp1yucuC0mYo/3-Appiee-Medicare?page-id=0%3A1&node-id=2-135"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_5.png" alt="">
+              <div class="project-content">
+                <h3>MediCare Hub</h3>
+                <p>Complete healthcare management with appointment booking and medical records.</p>
+                <span class="project-tag">Healthcare</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 6 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/GwViQfQxKuVsAgGvBCwfc5/4-Appiee-Door-Step?page-id=0%3A1&node-id=3-357"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_6.png" alt="">
+              <div class="project-content">
+                <h3>Work Force 360</h3>
+                <p>Smart workforce management platform for operational service optimization.</p>
+                <span class="project-tag">Workforce</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 7 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/4of8kHTMZi1NsChXYPq7wH/5-Appiee-Grocery?page-id=0%3A1&node-id=2-4"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_7.png" alt="">
+              <div class="project-content">
+                <h3>Procure Ease</h3>
+                <p>Vendor and procurement management system with workflow optimization.</p>
+                <span class="project-tag">Procurement</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 8 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/AvxC2XDIImjeVZESTwZD3P/6-Med4Now-Mobile-App-UI?page-id=0%3A1&node-id=3-1089"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_8.png" alt="">
+              <div class="project-content">
+                <h3>Health Vault</h3>
+                <p>Secure medical record access with simplified healthcare experience.</p>
+                <span class="project-tag">Medical Records</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 9 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/Xv7fRjZwfc1nmmlgQaac8w/7-Namakkal-Transport-Carriers?page-id=0%3A1&node-id=2-392"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_9.png" alt="">
+              <div class="project-content">
+                <h3>Fleet Guard</h3>
+                <p>Vehicle management and logistics tracking solution for transport operations.</p>
+                <span class="project-tag">Fleet Management</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 10 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/7KQcahORnu6jARwp4vYDOR/8-Cruzze-Website-1?page-id=0%3A1&node-id=4-1533"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_10.png" alt="">
+              <div class="project-content">
+                <h3>IT Service Desk</h3>
+                <p>Support management platform for resolving technical issues efficiently.</p>
+                <span class="project-tag">IT Support</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 11 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/X32w9yxpDMkIaVwEuJ7A17/9-Cruzze-Website-2?page-id=0%3A1&node-id=2-1519"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_11.png" alt="">
+              <div class="project-content">
+                <h3>Tech Connect</h3>
+                <p>Security and IT infrastructure solutions with enterprise UI experience.</p>
+                <span class="project-tag">Cyber Security</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 12 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/uO8SEdS9NRBkhtHBOMRtVL/10-Kan-Malai-Foundations?page-id=0%3A1&node-id=2-5"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_12.png" alt="">
+              <div class="project-content">
+                <h3>Trade Sphere</h3>
+                <p>Modern trading and investment experience focused on smart finance.</p>
+                <span class="project-tag">Trading</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 13 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/86Jmq5XHDTqA4DG8C57dBY/11-British-Bathroom-Fittings?page-id=0%3A1&node-id=2-12"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_13.png" alt="">
+              <div class="project-content">
+                <h3>Imperial Bath Fitters</h3>
+                <p>Luxury bathroom fittings and elegant installation service experiences.</p>
+                <span class="project-tag">Synapse Lab</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 14 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/Twy714F5SIyT0F0pidAV3J/12-Merge-Shipping---Logistics-UI?page-id=0%3A1&node-id=2-10"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_14.png" alt="">
+              <div class="project-content">
+                <h3>Swift Logistics</h3>
+                <p>Fast and reliable logistics platform with operational dashboard UX.</p>
+                <span class="project-tag">Shipping</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 15 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/5hbaprlpVABuBhanBrWe5x/13-Spritzing-Webpage-UI?page-id=0%3A1&node-id=2-1781"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_15.png" alt="">
+              <div class="project-content">
+                <h3>Farm Tech Solutions</h3>
+                <p>Smart agriculture technologies for productivity and sustainability.</p>
+                <span class="project-tag">Agriculture</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 16 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/EM4G9Y4J2dHFNwYbiu8e7O/14-Agrikon-Webpage-UI?page-id=0%3A1&node-id=2-55"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_16.png" alt="">
+              <div class="project-content">
+                <h3>ChatBot AI Solutions</h3>
+                <p> Natural Language Processing,
+                  Machine Learning and Deep Learning Experiences. </p>
+                <span class="project-tag">Plumbing</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 17 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/mplJ2KtwDF9T6BWDIIWpS2/15-Transitflow-Webpage-UI?page-id=0%3A1&node-id=2-2"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_17.png" alt="">
+              <div class="project-content">
+                <h3>Freight Flow</h3>
+                <p>Freight and transportation management with optimized cargo tracking.</p>
+                <span class="project-tag">Cargo</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 18 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/WqRzgsBRqo0Ww4Tl2uabf1/16-Maxwell-Webpage-UI?page-id=0%3A1&node-id=2-672"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_18.png" alt="">
+              <div class="project-content">
+                <h3>Industrial Power Solutions</h3>
+                <p>High-performance industrial systems with enterprise-focused design.</p>
+                <span class="project-tag">Industrial</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 19 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/GYg1VNeXUOnVVJMev6PuYz/17-Wood-Webpage-UI?page-id=0%3A1&node-id=2-17"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_19.png" alt="">
+              <div class="project-content">
+                <h3>Heritage Interiors</h3>
+                <p>Luxury interior design experiences crafted for modern living spaces.</p>
+                <span class="project-tag">Interior Design</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 20 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/5MueNutdhdX1wDlSyaUo3b/5-Pragma-Edge-Webpage-UI?page-id=0%3A1&node-id=2-767"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_20.png" alt="">
+              <div class="project-content">
+                <h3>Pro Tech Innovations</h3>
+                <p>Enterprise-grade industrial technology built with modern UX systems.</p>
+                <span class="project-tag">Technology</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 21 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/DgSXak6S4xjeeNzm8LSDCU/1-Employee-Management-STD-Web-App-UI?page-id=0%3A1&node-id=2-672"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_21.png" alt="">
+              <div class="project-content">
+                <h3>Task Master</h3>
+                <p>Smart task management dashboard improving collaboration and workflow.</p>
+                <span class="project-tag">Task Management</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 22 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/nEJn8QZFSAnvjM8MijyQCZ/2-Employee-Management-Web-App-UI?page-id=0%3A1&node-id=2-869"
+		target="_blank"
+     	class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_22.png" alt="">
+              <div class="project-content">
+                <h3>Schedul Ease</h3>
+                <p>Employee scheduling and workflow planning system for organizations.</p>
+                <span class="project-tag">Scheduling</span> </div>
+            </div>
+            </a> </div>
+          
+          <!-- PROJECT 23 -->
+          <div class="swiper-slide"> <a href="https://www.figma.com/proto/Eg2U7HSJUCIg0kYbEI0RUX/National-Life---General-Insurance-Company?page-id=0%3A1&node-id=2-6165"
+     target="_blank"
+     class="project-link">
+            <div class="project-card"> <img src="assets/img/uxui_projects/project_23.png" alt="">
+              <div class="project-content">
+                <h3>One Click Insure</h3>
+                <p>Fast insurance onboarding with instant quotes and secure policy flow.</p>
+                <span class="project-tag">Insurance</span> </div>
+            </div>
+            </a> </div>
+        </div>
+        
+        <!-- PAGINATION -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- NAVIGATION -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+  <!-- LOAD SWIPER FIRST --> 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+  
+  <!-- INITIALIZE --> 
+  <script>
+
+new Swiper(".uxuiSwiper", {
+
+slidesPerView:4,
+spaceBetween:30,
+loop:true,
+
+pagination:{
+el:".swiper-pagination",
+clickable:true,
+},
+
+navigation:{
+nextEl:".swiper-button-next",
+prevEl:".swiper-button-prev",
+},
+
+breakpoints:{
+320:{
+slidesPerView:1,
+},
+768:{
+slidesPerView:2,
+},
+1024:{
+slidesPerView:4,
+}
+}
+
+});
+
+</script>
+	
+<Section class="video-gallery-container" id="vidgal">
+
+      <div class="video-gallery">
+        <div class="featured-video">
+          <div class="responsive-iframe">
+            <iframe
+              width="1280"
+              height="720"
+              src="https://www.youtube.com/embed/Qotrolp-E28?si=ZBenalZOq97XMT_P"
+              title="YouTube video player"
+              frameborder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <h3 class="video-title">
+            Poster Design in 10 Seconds | Design Transformation | Sri Guru Graphics
+          </h3>
+			<p class="video-desc">✨ Witness creative storytelling — frame by frame, pixel by pixel.
+			A fast-paced design transformation from sketch to stunning!
+
+			👇 Need eye-catching posters for your business or event?
+			Reach out to Sri Guru Graphics and Systems – We turn ideas into visuals.
+
+			🔔 Subscribe for more design reveals and creative tips.
+
+</p>
+        </div>
+
+        <div class="all-videos">
+          <div class="video">
+            <img
+              class="thumbnail"
+              data-id="ZPabwsKY13A"
+              data-title="Design Responsive Course Cards Using HTML, CSS & JavaScript"
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 1.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+          </div>
+
+          <div class="video">
+            <img
+              class="thumbnail"
+              data-id="ohFuDyhED8s"
+              data-title="Design A Responsive Portfolio Website Using HTML, CSS & JS"
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 2.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+          </div>
+
+          <div class="video">
+            <img
+              class="thumbnail"
+              data-id="prX_NC3Nbh8"
+              data-title="Design A Responsive Homepage Using HTML, CSS For Blogger"
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 3.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+          </div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="m5g_5Qo6frc"
+              data-title="Best Video Thumbnail Maker Online"
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 4.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+          </div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 5.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+          </div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 6.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 7.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 8.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 9.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 10.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 11.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 12.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 13.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 14.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 15.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 16.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 17.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 18.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 19.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/1 Anniversaries/1 Anniversary Thumbnail Design_Image 20.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_1.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_2.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_3.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_4.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_5.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_6.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/2 Intro Sessions/2 Intro Session Thumbnail Design_7.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 1.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 2.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 3.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 4.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 5.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 6.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 7.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 8.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 9.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 10.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 11.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 12.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 13.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 14.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/3 Learning Modules/3 Learning Modules Thumbnail Design_Design 15.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 1.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 2.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 3.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 4.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 5.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 6.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly "
+              src="assets/img/video_thumbs/4 Motion Pictures/4 Motion Graphics Thumbnail Design_Thumbnail Design 7.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly"
+              src="assets/img/video_thumbs/5 New Launchers/5 New Launching Thumbnail Design_1.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+			
+			<div class="video">
+            <img
+              class="thumbnail"
+              data-id="oVnILqIhHk8"
+              data-title="How to make a YouTube Custom thumbnail quickly"
+              src="assets/img/video_thumbs/5 New Launchers/5 New Launching Thumbnail Design_2.png"
+              alt=""
+            />
+
+            <div class="play-icon">
+              <img src="assets/img/video_thumbs/play-icon.png" alt="" />
+            </div>
+			</div>
+        </div>
+      </div>
+    </section>	
+  <section id="team" class="team-section light-background">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>The Grand Elegance Team</h2>
+      <p>Crafting Experiences, Elevating Hospitality</p>
+    </div>
+	  <div class="row g-4 justify-content-center text-center">
+		<div class ="swiper-wrapper">
+			<div></dis>	
+      <div class="col-2" data-aos="fade-up">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t1.webp" alt="Sadna Shankar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Sadna Shankar</h1>
+                <p>Modeling, Anchoring/Compiring, Actress, Voice Recording, Designer and Editor</p>
+                <p>Passionate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"  data-aos="fade-up" data-aos-delay="100">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t2.webp" alt="Prabhakaran"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Prabhakaran</h1>
+                <p>Designer, Animator, Photographer and Videography</p>
+                <p>Passionate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"  data-aos="fade-up" data-aos-delay="200">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t3.webp" alt="Hemanth Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Hemanth Kumar</h1>
+                <p>3D Animator, Rigging Specialist</p>
+                <p>Dedicated And Passionate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"  data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t4.webp" alt="Manoj Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Manoj Kumar</h1>
+                <p>Ethical Hacker, Team Maker</p>
+                <p>Dedicated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		<div class="col-2"  data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t4.webp" alt="Manoj Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Manoj Kumar</h1>
+                <p>Ethical Hacker, Team Maker</p>
+                <p>Dedicated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		<div class="col-2"  data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t4.webp" alt="Manoj Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Manoj Kumar</h1>
+                <p>Ethical Hacker, Team Maker</p>
+                <p>Dedicated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		<div class="col-2"  data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t4.webp" alt="Manoj Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Manoj Kumar</h1>
+                <p>Ethical Hacker, Team Maker</p>
+                <p>Dedicated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		<div class="col-2"  data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"> <img src="assets/img/team/t4.webp" alt="Manoj Kumar"> </div>
+            <div class="flip-card-back">
+              <div class="textcontent">
+                <h1>Manoj Kumar</h1>
+                <p>Ethical Hacker, Team Maker</p>
+                <p>Dedicated</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>
+    </div>
+  </section>
+  <section id="contact" class="contact section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Book Appointment Online</p>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-6 ">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200"> <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>Vadavalli, Coimbatore, Tamilnadu, India</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300"> <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>+91 78452 67303</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>epic2025.eee@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              </div>
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <button type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.812446434965!2d76.89254327600777!3d11.052684154035347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f5fd5d93fdb%3A0xba34492641cf268!2s664%2C%20Yamuna%20Nagar%20Road%2C%20Kalappa%20Naicken%20Palayam%2C%20Coimbatore%2C%20Tamil%20Nadu%20641108!5e0!3m2!1sen!2sin!4v1779262165462!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="footer" class="footer dark-background">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about"> <a href="index.html" class="logo d-flex align-items-center"> <span class="sitename">EpicMatrix</span> </a>
+        <div class="footer-contact pt-3">
+          <p>Vadavalli, Coimbatore</p>
+          <p>Tamilnadu, India</p>
+          <p class="mt-3"><strong>Mobile:</strong> <span>+91 78452 67303</span></p>
+          <p><strong>Email:</strong> <span>epic2025.eee@gmail.com</span></p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Operations</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Featured Services</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">2D | 3D Designing</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">UXUI Designing</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">E-Learning</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">E-Projects</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#">Animation | VR</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4>Social Connections</h4>
+        <div class="social-links d-flex mt-4"> <a href="https://www.instagram.com/kitchaa2026/" target="_blank"><i class="bi bi-instagram"></i></a> <a href="https://www.linkedin.com/in/krishna-murthy-95a545375/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://www.youtube.com/@epic2025eee?sub_confirmation=1" target="_blank"><i class="bi bi-youtube"></i></a> <a href="https://sketchfab.com/epic2025.eee" target="_blank"><i class="bi bi-sketcfab"></i></a> <a href="https://blinq.me/qqMAhUPZxsOp?bs=db" target="_blank"><i class="bi bi-blinq"></i></a> <a href="https://fliphtml5.com/homepage/tlhqv/path-identifier-command/" target="_blank"><i class="bi bi-flip-html5"></i></a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Epicmatrix</strong> <span>All Rights Reserved</span></p>
+    <div class="credits"> Designed by <a href="https://blinq.me/qqMAhUPZxsOp?bs=db" Target="_blank">Sri Guru Graphics And Systemx</a> | </div>
+  </div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 
+<script>
+const texts = [
+  "Designer",
+  "Developer",
+  "Animator",
+  "Video Editor",
+  "Creative Thinker",
+  "UI/UX Specialist"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+function type() {
+
+  if (count === texts.length) {
+    count = 0;
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("typing").textContent = letter;
+
+  if (letter.length === currentText.length) {
+
+    setTimeout(() => {
+      erase();
+    }, 1200);
+
+    return;
+  }
+
+  setTimeout(type, 100);
+}
+
+function erase() {
+
+  letter = currentText.slice(0, --index);
+
+  document.getElementById("typing").textContent = letter;
+
+  if (letter.length === 0) {
+
+    count++;
+    setTimeout(type, 300);
+    return;
+  }
+
+  setTimeout(erase, 50);
+}
+
+type();
+</script> 
+<script>
+  const lightbox = GLightbox({
+    selector: '.gallery'
+  });
+</script> 
+<script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+</script> 
+<script>
+const videoThumbnails = document.querySelectorAll(
+  ".video-gallery .all-videos .thumbnail"
+);
+const videoPlayer = document.querySelector(
+  ".video-gallery .featured-video iframe"
+);
+const videoTitle = document.querySelector(".video-gallery .video-title");
+
+const showVideo = (videoId, title) => {
+  let videoUrl = `https://www.youtube.com/embed/${videoId}?rel=0`;
+  videoPlayer.setAttribute("src", videoUrl);
+  videoTitle.innerHTML = title;
+};
+
+videoThumbnails.forEach((v) => {
+  v.addEventListener("click", () => {
+    showVideo(v.dataset.id, v.dataset.title);
+  });
+});	
+</script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="assets/vendor/php-email-form/validate.js"></script> 
+<script src="assets/vendor/aos/aos.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script> 
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script> 
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> 
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> 
+<script src="assets/js/main.js"></script> 
+<script src="script.js"></script>
+</body>
+</html>
