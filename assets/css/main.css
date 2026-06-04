@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .browse-link:hover {
   color: #0d6efd;
-  opac ity: 1;
+  opacity: 1;
 }
 .service-card {
   background: #fff;
